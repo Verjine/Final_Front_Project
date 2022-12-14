@@ -1,0 +1,41 @@
+
+body {
+//   min-height: 100vh;
+
+  background-color: #f1f1f1;
+}
+.about {
+  background: url("shop.jpg") no-repeat left;
+  background-size: 55%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.abt_text{
+   width: 55%;
+   float: right;
+   background-color: #fdfdfd;
+   padding: 70px 40px 70px 40px;
+p{
+    color: #545454;
+    line-height:20px;
+    text-align: justify;
+    span{
+        color: chocolate;
+        font-size: 20px;
+        text-decoration:underline;
+        font-weight:bold;
+    }
+    
+}
+}
+@media screen and (max-width:1200px){
+    .about{
+        padding:20px;
+        .abt_text{
+            padding: 20px;
+        }   
+    }
+}
+
+

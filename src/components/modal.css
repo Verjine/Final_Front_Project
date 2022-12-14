@@ -1,0 +1,83 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modalBtn {
+  padding: 1px 55px;
+  color: rgb(252, 147, 11);
+  border: none;
+}
+
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer {
+  width: 50%;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px rgba(22, 135, 217, 0.2);
+  overflow-y: scroll;
+}
+.modalContainer .empty {
+  text-align: center;
+  justify-content: center;
+}
+.modalContainer .success {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.modal_closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background-color: black;
+  color: rgb(227, 243, 248);
+  font-size: 20x;
+  border: 2px solid;
+  width: 30px;
+  text-align: center;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.modal_fields {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.modal_fields .image_div .flw_img {
+  width: 150px;
+}
+.modal_fields .other_div .mod_header {
+  font-size: 25px;
+}
+.modal_fields .other_div .mod_q {
+  font-style: italic;
+}
+.modal_fields .other_div .mod_p {
+  font-style: italic;
+}
+.modal_fields .other_div .mod_remove {
+  color: #ff8f52;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: white;
+}/*# sourceMappingURL=modal.css.map */

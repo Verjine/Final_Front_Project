@@ -1,0 +1,95 @@
+.prod_box {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+  //   background-color: #eeeeee;
+  //   border: 5px solid #dadada;
+  // padding: 20px;
+  // .shop_image {
+  //   background-color: #eeeeee;
+  //   border: 5px solid #dadada;
+  //   border-radius: 25px;
+  .box_list {
+    background-color: rgb(253, 248, 248);
+    border: 3px solid #dadada;
+    border-radius: 10px;
+    .image_wrapper {
+      img {
+        width: 250px;
+        height: 230px;
+        object-fit: contain;
+        object-position: center;
+        padding: 5px 20px 0px 20px;
+      }
+    }
+    .box_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        color: black;
+      }
+      .price {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        span {
+          font-size: 20px;
+        }
+
+        .cart_form {
+          text-align: center;
+          padding: 10px;
+          margin: 0;
+          padding: 0px 7px 7px 7px;
+          border: 2px solid none;
+            color: #ff8f52;
+            font-style: italic;
+            font-weight: bold;
+            margin: 0;
+          }
+          .re_btn {
+            width: 150px;
+            display: flex;
+            padding: 5px;
+            .add {
+              border: 2px solid;
+              border-radius: 30px;
+              width: 50px;
+            }
+            .remove {
+              border: 2px solid;
+              border-radius: 30px;
+              width: 50px;
+            }
+          }
+        }
+
+        .buy {
+          width: 100%;
+
+          span {
+            font-size: 17px;
+            font-weight: bold;
+            font-style: italic;
+            color: #ff8f52;
+          }
+        }
+      }
+    }
+  }
+
+.delete {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: italic;
+  color: #ff8f52;
+  width: 100%;
+}
+.modalBtn {
+  position: absolute;
+  left: 10px;
+  // margin-left: 80%;
+}

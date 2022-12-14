@@ -1,0 +1,13 @@
+@mixin lines {
+    content: "";
+    height: 2px;
+    background-color: rgb(103, 96, 96);
+    display: block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  @mixin horizontal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1.6rem;
+  }
