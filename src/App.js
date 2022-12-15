@@ -10,6 +10,7 @@ import "./pages/Login/Login.css";
 import "./pages/ProductCart/shop.css"
 import "./pages/About/about.css";
 import CartProvider from "./pages/ProductCart/CartContext";
+import Location from "./components/Location";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path ="/location" element = {<Location/>}> </Route>
         </Routes>
       </div>
     </CartProvider>
