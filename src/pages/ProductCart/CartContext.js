@@ -1,5 +1,24 @@
 import { createContext, useState } from 'react';
-import {  getProductData } from '../../api/flowers';
+import { useEffect } from 'react';
+// import {  getProductData } from '../../api/flowers';
+
+ 
+
+// const [flowers, setFlowers] = useState([]);
+//   useEffect(() => {
+//     const url = "http://localhost:5000/flower";
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         console.log(data);
+//         setFlowers(data);
+//       } catch (error) {
+//         console.log("error", error);
+//       }
+//     };
+//     fetchData();
+//   },[]);
 
 
 export const CartContext = createContext({
@@ -47,11 +66,11 @@ export function CartProvider({ children }) {
             setCartProducts(
 
                 cartProducts.map(
-                    product =>
+                    product => (
                         product.id === id                                  
                             ? { ...product, quantity: product.quantity + 1 } 
                             : product                                                
-                )
+                ))
 
             )
 
@@ -97,6 +116,8 @@ export function CartProvider({ children }) {
         return totalCost;
     }
 
+    
+
     const contextValue = {
         items: cartProducts,
         getProductQuantity,
@@ -115,3 +136,13 @@ export function CartProvider({ children }) {
 }
 
 export default CartProvider;
+
+// export const useUpdater = (value, initialState = '') => {
+//     const [state, setState] = useState(initialState);
+//     useEffect(() => {
+//       setState(value);
+//     }, [value, setState]);
+//     return [state, setState];
+//   };
+
+// const [data, setData] = useUpdater(fetchData);

@@ -15,6 +15,8 @@ const Shop = () => {
     0
   );
 
+  
+
   return (
     <div>
       <Menu />
