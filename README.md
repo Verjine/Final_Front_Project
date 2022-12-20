@@ -1,7 +1,7 @@
 # <FlowerShop frontend>
 ## Description
- My project is an online flower store, where you can buy flowers.
-This project was generated with React version 18.2.0.
+- My project is an online flower store, where you can buy flowers.
+- This project was generated with React version 18.2.0.
    
 ## Features
 + Opportunity to see the list products
