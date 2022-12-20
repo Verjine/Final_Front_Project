@@ -23,7 +23,7 @@ https://github.com/Verjine/Final_Front_Project.git
 
  ## FlowerShop backend
  
- [Backend link](https://github.com/Verjine/FinalProject_Backend)
+ [Click here to open backend](https://github.com/Verjine/FinalProject_Backend)
  
   
   ## Author
