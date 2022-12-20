@@ -21,7 +21,9 @@ https://github.com/Verjine/Final_Front_Project.git
 + Build application
   ```npm start```
 
-  ## FlowerShop backend
+ ## FlowerShop backend
+ 
+ [Backend link](https://github.com/Verjine/FinalProject_Backend)
  
   
   ## Author
