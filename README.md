@@ -22,10 +22,11 @@ https://github.com/Verjine/Final_Front_Project.git
   ```npm start```
 
   ### FlowerShop backend
-  [1]: https://github.com/Verjine/FinalProject_Backend
+  [1]:https://github.com/Verjine/FinalProject_Backend "Backend"
+ 
   
   ## Author
- #Verjine
+ Verjine
 
 
 
