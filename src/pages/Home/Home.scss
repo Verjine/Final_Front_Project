@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   border: 0;
-  max-width: 1400px;
+  width: 100%;
 }
 body {
   background-color: hwb(0 85% 15%);
@@ -33,9 +33,7 @@ body {
   
   }
 }
-.icons {
-  margin-right: 50px;
-}
+
 ul {
   list-style-type: none;
   width: 100%;

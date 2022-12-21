@@ -6,8 +6,8 @@ function ProductCard(props) {
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(product._id);
   // console.log(cart.items);
+  // console.log(props)
   const [closed, setClosed] = useState(false);
-  console.log(closed, productQuantity)
 
   return (
     <div className="box_list">
@@ -47,8 +47,7 @@ function ProductCard(props) {
                   </button>
                 </div>
               </form>
-              <button onClick={() => setClosed(false)} 
-              className="delete">
+              <button onClick={() => setClosed(false)} className="delete">
                 Close
               </button>
             </>
@@ -56,7 +55,11 @@ function ProductCard(props) {
             <button
               className="buy"
               variant="primary"
-              onClick={() =>{ cart.addOneToCart(product._id);setClosed(true)}}
+              onClick={(e) => {
+                e.preventDefault();
+                cart.addOneToCart(product._id);
+                setClosed(true);
+              }}
             >
               <span>Add To Cart</span>
             </button>

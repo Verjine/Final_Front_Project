@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import CartProduct from "../pages/ProductCart/CartProduct";
 import { CartContext } from "../pages/ProductCart/CartContext";
 import "./modal.css";
+import { Funkcia } from "../api/flowers";
 import { RiEmotionUnhappyLine } from "react-icons/ri";
 const Modal = ({ open, onClose }) => {
   const cart = useContext(CartContext);
-
+  const { flower } = Funkcia();
   const productsCount = cart.items.reduce(
     (sum, product) => sum + product.quantity,
     0
@@ -26,7 +27,7 @@ const Modal = ({ open, onClose }) => {
           <div className="modal_content">
             {productsCount > 0 ? (
               <>
-                {cart.items.map((currentProduct, idx) => (
+                {flower.map((currentProduct, idx) => (
                   <CartProduct
                     key={idx}
                     id={currentProduct.id}
