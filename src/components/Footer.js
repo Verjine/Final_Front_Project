@@ -25,7 +25,6 @@ function Footer() {
           </p>
         </div>
       </div>
-      
 
       <div className="social">
         <h2>Follow Us</h2>
@@ -43,18 +42,6 @@ function Footer() {
             <BsLinkedin />
           </a>
         </div>
-        {/* <Link to="">
-              <BsInstagram  color="#ff8f52" size= "25px"/>
-            </Link>
-            <Link to="">
-              <BsFacebook   color="#ff8f52" size= "25px"/>
-            </Link>
-            <Link to="">
-              <BsLinkedin  color="#ff8f52" size= "25px" />
-            </Link>
-            <Link to="">
-              <BsTwitter  color="#ff8f52" size= "25px" />
-            </Link> */}
       </div>
       <div className="contact">
         <h2>Contact</h2>
