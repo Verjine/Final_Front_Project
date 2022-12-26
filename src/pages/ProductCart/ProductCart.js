@@ -81,10 +81,8 @@ function ProductCard(props) {
               variant="primary"
               onClick={(e) => {
                 e.preventDefault();
-<<<<<<< HEAD
-=======
+
                 cart.addOneToCart(product._id);
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
                 setClosed(true);
               }}
             >

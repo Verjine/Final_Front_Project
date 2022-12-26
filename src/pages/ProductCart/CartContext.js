@@ -1,32 +1,8 @@
 import { createContext, useState } from "react";
-<<<<<<< HEAD
 import { useEffect } from "react";
-=======
-import { Funkcia } from "../../api/flowers";
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
-// import {  getProductData } from '../../api/flowers';
-
-// const [flowers, setFlowers] = useState([]);
-//   useEffect(() => {
-//     const url = "http://localhost:5000/flower";
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(url);
-//         const data = await response.json();
-//         console.log(data);
-//         setFlowers(data);
-//       } catch (error) {
-//         console.log("error", error);
-//       }
-//     };
-//     fetchData();
-//   },[]);
 
 export const CartContext = createContext({
-<<<<<<< HEAD
   flowers: [],
-=======
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
   items: [],
   getProductQuantity: () => {},
   addOneToCart: () => {},
@@ -37,7 +13,6 @@ export const CartContext = createContext({
 
 export function CartProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
-<<<<<<< HEAD
   const [flowers, setFlowers] = useState([]);
 
   useEffect(() => {
@@ -54,7 +29,6 @@ export function CartProvider({ children }) {
     };
     fetchData();
   }, []);
-=======
   // const [flowers, setFlowers] = useState([]);
 
   // useEffect(() => {
@@ -71,7 +45,6 @@ export function CartProvider({ children }) {
   //   };
   //   fetchData();
   // }, []);
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
 
   function getProductQuantity(id) {
     const quantity = cartProducts.find(
@@ -132,28 +105,16 @@ export function CartProvider({ children }) {
   }
 
   function getTotalCost() {
-<<<<<<< HEAD
     let totalCost = 0;
     cartProducts.map((cartItem) => {
       const productData = cartItem.id;
       totalCost += productData.price * cartItem.quantity;
-=======
-    const {getProductData} = Funkcia();
-    let totalCost = 0;
-    cartProducts.map((cartItem) => {
-      const productData = getProductData(cartItem.id);
-      console.log(productData)
-      // totalCost += productData.price * cartItem.quantity;
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
     });
     return totalCost;
   }
-
   const contextValue = {
-<<<<<<< HEAD
     flowers: flowers,
-=======
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
+
     items: cartProducts,
     getProductQuantity,
     addOneToCart,

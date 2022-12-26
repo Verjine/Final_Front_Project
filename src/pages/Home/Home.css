@@ -36,12 +36,19 @@ body {
   gap: 5px;
   font-size: 17px;
 
-<<<<<<< HEAD
 }
-=======
+ .tkn{
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
 
->>>>>>> 108f0577886bab1d0ceea322abde6ee8e23312b5
-
+ }
+ .p{
+  font-size: 17px;
+  color: rgb(161, 146, 146);
+  font-weight: bold;
+ }
+ 
 
 
 ul {
