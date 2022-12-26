@@ -1,19 +1,10 @@
 import React from "react";
-import { useState, useContext } from "react";
 import Products from "../../components/Products";
-import Menu from "../../components/menu";
+import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
-import { CartContext } from "../ProductCart/CartContext";
-import { SlBasket } from "react-icons/sl";
-import Modal from "../../components/Modal";
-const Shop = () => {
-  const cart = useContext(CartContext);
-  const [openModal, setOpenModal] = useState(false)
 
-  const productsCount = cart.items.reduce(
-    (sum, product) => sum + product.quantity,
-    0
-  );
+const Shop = () => {
+
 
   
 
@@ -21,12 +12,12 @@ const Shop = () => {
     <div>
       <Menu />
       <div className="menu">
-  
+{/*   
         <button className="modalBtn" onClick={() => setOpenModal(true)}>
           <SlBasket  size="30px" color="FF8F52"/> {productsCount} Items
-        </button>
+        </button> */}
       </div>
-      <Modal open={openModal} onClose={() => setOpenModal(false)} />
+      {/* <Modal open={openModal} onClose={() => setOpenModal(false)} /> */}
 
       <Products />
       <Footer />

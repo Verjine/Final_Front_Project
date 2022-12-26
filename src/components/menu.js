@@ -1,10 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsPersonFill } from "react-icons/bs";
-import { useState, useContext } from "react";
+import { CiLogout } from "react-icons/ci";
 
 
-const menu = () => {
+const Menu = () => {
+  const username = localStorage.getItem("username");
+  const logout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+  const token = localStorage.getItem("token");
+  //   const [username , setUsername] = useState("")
+
+  //   if (localdata != null &&  localdata.length > 0)
+  // {
+  //   setUsername(localdata)
+
+  // }
+  // console.log(localdata, 1245)
 
   // const cart = useContext(CartContext);
   // const [openModal, setOpenModal] = useState(false)
@@ -16,7 +30,13 @@ const menu = () => {
   return (
     <>
       <div className="navbar">
-        <h1 > <Link to  = "/" className="shop" >  <span>Flower</span>Shop</Link></h1>
+        <h1>
+          {" "}
+          <Link to="/" className="shop">
+            {" "}
+            <span>Flower</span>Shop
+          </Link>
+        </h1>
         <nav>
           <ul>
             <li>
@@ -32,16 +52,24 @@ const menu = () => {
         </nav>
 
         <div className="icons">
-          
-           <Link to = "/register"> <BsPersonFill size="25px" color="FF8F52" />{" "}</Link>
-          
-          {/* <Link to="">
-            <BsCart2 size="25px" color="FF8F52" />{" "}
-          </Link> */}
+          {token ? (
+            <div className="icons_hide">
+              <div className="username">{username}</div>
+              <Link to="/" onClick={logout}>
+                <CiLogout size="25px" color="FF8F52" />
+              </Link>
+            </div>
+          ) : (
+            <div>
+              <Link to="/register">
+                <BsPersonFill size="25px" color="FF8F52" />
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>
   );
 };
 
-export default menu;
+export default Menu;

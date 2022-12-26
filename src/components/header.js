@@ -1,12 +1,14 @@
-import Menu from "./menu";
+import Menu from "./Menu";
+import { useState } from "react";
 
-function header() {
+function Header() {
+  
   return (
     <header className="header">
-   {/* <div>barev</div> */}
+     
       <Menu />
     </header>
   );
 }
 
-export default header;
+export default Header;

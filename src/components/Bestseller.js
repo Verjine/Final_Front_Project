@@ -11,16 +11,10 @@ function Bestseller() {
       {/* products container  */}
       <div className="products-container">
         {bestseler.map((element, id) => (
-          <div className ="box" key={id}> 
-            <img src= {element.imgUrl} alt=""/>
-          
+          <div className="box" key={id}>
+            <img src={element.imgUrl} alt="" />
+
             <h3>{element.title}</h3>
-            <div className="cart"> 
-            <span>{element.price}$</span>
-            <p>
-              Add to cart <BsCartPlus color=" #ff8f52" />
-            </p>
-            </div>
           </div>
         ))}
       </div>

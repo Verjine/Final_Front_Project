@@ -18,7 +18,7 @@
     .image_wrapper {
       img {
         width: 250px;
-        height: 230px;
+        height: 180px;
         object-fit: contain;
         object-position: center;
         padding: 5px 20px 0px 20px;
@@ -30,13 +30,15 @@
       justify-content: center;
       h3 {
         color: black;
+        font-size: 20px;
       }
       .price {
         display: flex;
         flex-direction: column;
         width: 100%;
+        gap: 10px;
         span {
-          font-size: 20px;
+          font-size: 22px;
         }
 
         .cart_form {
@@ -49,20 +51,25 @@
             font-style: italic;
             font-weight: bold;
             margin: 0;
+            font-size: 20px;
           }
           .re_btn {
             width: 150px;
             display: flex;
             padding: 5px;
+            height: 50px;
             .add {
               border: 2px solid;
               border-radius: 30px;
-              width: 50px;
+              width: 60px;
+              height: 25px;
             }
             .remove {
               border: 2px solid;
               border-radius: 30px;
-              width: 50px;
+              width: 60px;
+              height: 25px;
+
             }
           }
         }
@@ -92,4 +99,14 @@
   position: absolute;
   left: 10px;
   // margin-left: 80%;
+}
+.paypal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_buy{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }

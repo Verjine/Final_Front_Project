@@ -1,13 +1,27 @@
 import { CartContext } from "../ProductCart/CartContext";
 import { useContext, useState } from "react";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import PayPalButton from "../../components/PayPalButton";
+import { Link } from "react-router-dom";
+
+
+
 
 function ProductCard(props) {
+  const initialOptions = {
+    "client-id": process.env.REACT_APP_CLIENT_ID,
+    currency: "USD",
+    intent: "capture",
+    components: "buttons",
+  };
   const product = props.product;
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(product._id);
+  const token = localStorage.getItem("token");
+
   // console.log(cart.items);
+  // console.log(props)
   const [closed, setClosed] = useState(false);
-  console.log(closed, productQuantity)
 
   return (
     <div className="box_list">
@@ -46,9 +60,18 @@ function ProductCard(props) {
                     -
                   </button>
                 </div>
+                {token?
+                <div className="paypal">
+                <PayPalScriptProvider options={initialOptions}>
+                  <PayPalButton product={product} />
+                </PayPalScriptProvider>
+              </div>
+              : <Link className="login_buy" to =  "/login">Login for buy</Link>
+
+                }
+                
               </form>
-              <button onClick={() => setClosed(false)} 
-              className="delete">
+              <button onClick={() => setClosed(false)} className="delete">
                 Close
               </button>
             </>
@@ -56,9 +79,12 @@ function ProductCard(props) {
             <button
               className="buy"
               variant="primary"
-              onClick={() =>{ cart.addOneToCart(product._id);setClosed(true)}}
+              onClick={(e) => {
+                e.preventDefault();
+                setClosed(true);
+              }}
             >
-              <span>Add To Cart</span>
+              <span>Buy it</span>
             </button>
           )}
         </div>

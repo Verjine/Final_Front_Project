@@ -12,7 +12,7 @@
 }
 .prod_box .box_list .image_wrapper img {
   width: 250px;
-  height: 230px;
+  height: 180px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -26,14 +26,16 @@
 }
 .prod_box .box_list .box_info h3 {
   color: black;
+  font-size: 20px;
 }
 .prod_box .box_list .box_info .price {
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 10px;
 }
 .prod_box .box_list .box_info .price span {
-  font-size: 20px;
+  font-size: 22px;
 }
 .prod_box .box_list .box_info .price .cart_form {
   text-align: center;
@@ -45,21 +47,25 @@
   font-style: italic;
   font-weight: bold;
   margin: 0;
+  font-size: 20px;
 }
 .prod_box .box_list .box_info .price .re_btn {
   width: 150px;
   display: flex;
   padding: 5px;
+  height: 50px;
 }
 .prod_box .box_list .box_info .price .re_btn .add {
   border: 2px solid;
   border-radius: 30px;
-  width: 50px;
+  width: 60px;
+  height: 25px;
 }
 .prod_box .box_list .box_info .price .re_btn .remove {
   border: 2px solid;
   border-radius: 30px;
-  width: 50px;
+  width: 60px;
+  height: 25px;
 }
 .prod_box .box_list .box_info .buy {
   width: 100%;
@@ -82,4 +88,16 @@
 .modalBtn {
   position: absolute;
   left: 10px;
+}
+
+.paypal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_buy {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }/*# sourceMappingURL=shop.css.map */
